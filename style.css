@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+    "h1 h1 h1"
+    "header header header"
+    "banner banner sb1"
+    "banner banner sb2"
+    "sm main main"
+    "tags main main"
+    "recents main main"
+    "footer footer footer";
+}
+
+h1{
+    padding: 1rem;
+    grid-area: h1;
+    background-color: red;
+
+}
+
+header{
+    padding: 0.8rem;
+    grid-area: header;
+    background-color: pink;
+
+
+}
+
+.banner{
+    height: 20vh;
+    grid-area: banner;
+    background-color: blue;
+
+}
+
+.side-box1{
+
+    grid-area: sb1;
+    background-color: green;
+}
+
+.side-box2{
+    grid-area: sb2;
+    background-color: grey;
+}
+
+.side-menu{
+    grid-area: sm;
+    background-color: crimson;
+
+}
+
+.tags{
+
+    grid-area: tags;
+    background-color: gold;
+}
+
+.recents{
+    grid-area: recents;
+    background-color: aliceblue;
+
+}
+
+.main{
+    min-length: 70%
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    grid-area: main;
+    background-color: gold;
+
+}
+
+.footer{
+    display: flex;
+    flex: display;
+    grid-area: footer;
+    background-color: aquamarine;
+    padding:10px ;
+
+
+}
+.item{
+    flex-grow: 1;
+    padding: 2rem;
+    border: 2px solid lightcoral;
+}
+.main > .item:nth-child(odd){
+    color: white;
+    background-color: rgba(214, 205, 255, 0.445);
+
+}
+
+.left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.right{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center{
+    flex:2;
+}
