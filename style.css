@@ -69,13 +69,13 @@ header{
 }
 
 .main{
-    min-length: 70%
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: space-between;
     grid-area: main;
     background-color: gold;
+    min-height: 70vh;
 
 }
 
@@ -120,4 +120,41 @@ header{
 }
 .center{
     flex:2;
+}
+/* ipad view */
+@media (768px <= width <= 1024px){
+    .wrapper{
+        display: grid;
+        gap: 0.5rem;
+        grid-template-areas:
+        "header header header"
+        "banner banner sb1"
+        "banner banner sb2"
+        "h1 h1 h1"
+        "sm main main"
+        "tags main main"
+        "recents main main"
+        "footer footer footer";
+    }
+
+}
+
+/* mobile view */
+@media (0 <= width <= 768px){
+    .wrapper{
+        display: grid;
+        gap: 0.5rem;
+        grid-template-areas:
+        "h1"
+        "header"
+        "banner"
+        "sb2"
+        "sb1"
+        "sm"
+        "tags"
+        "main"
+        "recents"
+        "footer";
+    }
+
 }
